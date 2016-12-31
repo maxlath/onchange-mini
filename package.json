@@ -1,6 +1,6 @@
 {
   "name": "onchange-mini",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "run a command on file(s) change, the minimalist way",
   "main": "index.js",
   "bin": {
