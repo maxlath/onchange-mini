@@ -3,12 +3,11 @@ const fs = require('fs')
 const { spawn } = require('child_process')
 
 // Expected args:
-// onchange.js ./a/file ./another/file -- the command to execute
+// onchange-mini ./a/file ./another/file -- the command to execute
 
 const [ fileArgs, commandArgs ] = process.argv.slice(2).join(' ').split('--')
 const files = fileArgs.trim().split(' ')
 const [ command, ...args ] = commandArgs.trim().split(' ')
-const { DEBUG } = process.env
 
 function log () {
   if (process.env.DEBUG) console.log.apply(console, arguments)
@@ -20,17 +19,15 @@ log('args:', args)
 
 // See fs.watchFile documentation
 // https://nodejs.org/api/fs.html#fs_fs_watchfile_filename_options_listener
-watcherOptions = { persistent: true, interval: 100 }
+const watcherOptions = { persistent: true, interval: 100 }
 
-var onChange = function(curr, prev) {
+const onChange = function (curr, prev) {
   log('event', curr, prev)
   // Check if the last modification time (mtime) changed
-  if(curr.mtime !== prev.mtime) {
+  if (curr.mtime !== prev.mtime) {
     log('change')
     spawn(command, args, { stdio: 'inherit' })
   }
 }
 
-files.forEach((file) => {
-  fs.watchFile(file, watcherOptions, onChange)
-})
+files.forEach((file) => fs.watchFile(file, watcherOptions, onChange))
