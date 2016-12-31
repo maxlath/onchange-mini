@@ -1,0 +1,28 @@
+{
+  "name": "onchange-mini",
+  "version": "1.0.0",
+  "description": "run a command on file(s) change, the minimalist way",
+  "main": "index.js",
+  "bin": {
+    "onchange-mini": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxlath/onchange-mini.git"
+  },
+  "keywords": [
+    "onchange",
+    "watcher",
+    "npm",
+    "scripts"
+  ],
+  "author": "maxlath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxlath/onchange-mini/issues"
+  },
+  "homepage": "https://github.com/maxlath/onchange-mini#readme"
+}
