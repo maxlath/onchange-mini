@@ -33,7 +33,7 @@ onchange-mini ./a/folder/to/watch ./another/folder -- the command to execute
 
 **:warning: :two: this isn't watching recursively: any file change in subfolders won't be detected**
 
-You can work around this by watching both the directory and its files like so
+You can work around :warning: :one: by watching both the directory and its files like so
 ```sh
 onchange-mini ./a/folder/to/watch ./a/folder/to/watch/* -- the command to execute
 ```
