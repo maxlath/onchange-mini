@@ -74,7 +74,7 @@ export DEBUG=true; onchange-mini ./a/file/to/watch -- the command to execute
 
 ### With inotifywait
 ```sh
-while true ; do inotifywait /some/folder && echo 'CHANGE'; done
+while true ; do inotifywait -r /some/folder -e modify && echo 'CHANGE'; done
 ```
 
 [add yours]
