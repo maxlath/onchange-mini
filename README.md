@@ -51,3 +51,12 @@ export DEBUG=true; onchange-mini ./a/file/to/watch -- the command to execute
 * open `./index.js`
 * hack your way
 * minimalist PR welcome
+
+## Alternatives
+
+### With inotifywait
+```sh
+while true ; do inotifywait /some/folder && echo 'CHANGE'; done
+```
+
+[add yours]
