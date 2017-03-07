@@ -1,6 +1,24 @@
 # onchange-mini
 run a command on file(s) change, the minimalist way
 
+## Summary
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [Motivation](#motivation)
+- [Installation](#installation)
+- [How-to](#how-to)
+  - [Watch file(s) changes](#watch-files-changes)
+  - [Watch directories](#watch-directories)
+  - [Debug](#debug)
+  - [For any other feature](#for-any-other-feature)
+- [Alternatives](#alternatives)
+  - [With inotifywait](#with-inotifywait)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Motivation
 
 It happened repetively that [onchange](https://github.com/Qard/onchange) didn't work for me, for reasons I couldn't track down. So, out of frustration, I wrote a minimalist implementation that would just do the thing I needed: watching a few files and running a script when they change. And it worked! So I wrapped it into this module, mostly for my own use, but maybe you will find it useful too.
